@@ -1,0 +1,32 @@
+<h1 class="login-h1">
+   <span class="primary-color">Weather Watch</span> App
+  </h1>
+  <div class="login">
+    <h2 class="login-header">Log in</h2>
+    <form [formGroup]="loginForm" class="login-container" (ngSubmit)="login()">
+  
+      <p [ngClass]="{ 'has-error': isSubmitted && formControls.login.errors }">
+        <input type="text" placeholder="Login" formControlName="login">
+      </p>
+  
+      <div *ngIf="formControls.login.touched && formControls.login.errors" class="help-block">
+        <div *ngIf="formControls.login.errors.required">Login is required</div>
+        <div *ngIf="formControls.login.errors.minlength">Login should contain at least 6 characters</div>
+        <div *ngIf="formControls.login.errors.maxlength">Login should contain max 100 characters</div>
+      </div>
+  
+      <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+        <input type="password" placeholder="Password" formControlName="password">
+      </p>
+  
+      <div *ngIf="formControls.password.touched && formControls.password.errors" class="help-block">
+        <div *ngIf="formControls.password.errors.required">Password is required</div>
+        <div *ngIf="formControls.password.errors.minlength">Password should contain at least 6 characters</div>
+        <div *ngIf="formControls.password.errors.maxlength">Password should contain max 100 characters</div>
+      </div>
+  
+      <p>
+        <input type="submit" value="Log in">
+      </p>
+    </form>
+  </div>

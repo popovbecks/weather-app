@@ -1,0 +1,35 @@
+.weather-page-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .btn-logout {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        }
+    .card {
+        margin-top: 20px;
+        position: relative;
+        .card-body {
+            background-color: floralwhite;
+        }
+        .weather-temp {
+            color: #cddc39;
+            position: absolute;
+            right: 30px;
+            top: 200px;
+            font-size: 47px;
+            > span {
+                color: #076CD0;
+            }
+}
+        .card-title {
+            color: #076CD0;
+            text-align: center;
+        }
+        .card-text {
+            color: #EA9902;
+        }
+    }
+}

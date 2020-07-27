@@ -1,0 +1,12 @@
+.navbar{
+    height: 60px;
+    background-color: #2d3947!important;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    > p {
+        color: #fff;
+        padding: 10px 0
+    };
+}

@@ -1,0 +1,15 @@
+<div class="weather-page-wrapper" *ngIf="weatherData">
+    <div class="btn-logout">
+        <button type="button" (click)="logout()" class="btn btn-success">Log Out</button>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="{{weatherData.forecast.weather_icons[0]}}" class="card-img-top" alt="...">
+        <div class="weather-temp">{{weatherData.forecast.temperature}}&#8451;<span><span style="color:gray">/</span>{{weatherData.forecast.humidity}}%</span></div>
+        <div class="card-body">
+          <h5 class="card-title">{{weatherData.location}}</h5>
+          <p class="card-text">Weather: {{weatherData.forecast.weather_descriptions[0]}}</p>
+          <p class="card-text">Wind speed: {{weatherData.forecast.wind_speed}} m/s</p>
+          <p class="card-text">Pressure: {{weatherData.forecast.pressure}} hPa</p>
+        </div>
+      </div>
+</div>
